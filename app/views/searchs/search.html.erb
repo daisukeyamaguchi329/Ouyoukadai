@@ -1,0 +1,25 @@
+<% if @model == 'user' %>
+    <div class="container"> 
+     <div class="row">
+       <div class="col-lg-3"></div> 
+       <div class="col-lg-9"> 
+        <p><%= render 'searchs/form' %></p>
+       </div> 
+     </div>  
+   </div>
+  <h3>Users search for <%= @content %></h3>
+  <%= render 'users/index', users: @records %>
+ 
+   <% else @model == 'book' %>
+   <div class="container"> 
+     <div class="row">
+       <div class="col-lg-3"></div> 
+       <div class="col-lg-9"> 
+        <p><%= render 'searchs/form' %></p>
+       </div> 
+     </div>  
+   </div> 
+  <h3>Books search for <%= @content %></h3>
+  <%= render 'books/index', books: @records %>
+<% end %>
+
